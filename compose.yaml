@@ -1,0 +1,17 @@
+services:
+
+  db:
+    image: mysql:9.4.0
+    env_file:
+      - path: ./.env
+    ports:
+      - 3307:3306
+
+    volumes:
+    - mysql_data:/var/lib/mysql
+
+volumes:
+
+  mysql_data:
+
+    # (this is just an example, not intended to be a production configuration)
